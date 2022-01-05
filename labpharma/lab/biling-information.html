@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Vidmed Aayurveda</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.bootstrap4.min.css">
+	<script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+	<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="./assets/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<!--Header Panel Section-->
+		<div class="row col-sm-12 header-panel zero-margin">
+			<div class="application-bar" id="show-sidebar">
+				<i class="fas fa-align-justify"></i>
+			</div>
+			<div id="logo-bg">
+				<img src="./assets/images/logo-inline-small.png">
+			</div>
+			<div id="menu-1">
+				<ul style="list-style-type: none;">
+					<li class="a">OP Billing</li>
+					<li class="a">Lab List</li>
+					<li class="a">Services</li>
+					<li class="a">Packages</li>
+				</ul>
+			</div>
+		</div>
+		<div id="sidebar-overlay">
+			<div id="settings">
+                <div id="back-to-main-menu">
+                    <span><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Back to main menu</span>
+                </div>
+                <ul id="application-menu">
+                    <li class="menu-items"><strong>Change Password</strong></li>
+                    <li class="menu-items"><strong>Address</strong> </li>
+                    <li class="menu-items"><strong>Logout</strong> </li>
+                </ul>
+            </div>
+			<div id="transparent-box" class="transparent-box" >
+
+
+			</div>
+			<div class="sidebar">
+			  <div class="logo-sidebar">
+				<img src="./assets/images/logo-inline-small.png">
+				</div>
+				<div>
+					<ul id="application-menu">
+						<li class="menu-items"><strong>OP Billing</strong></li>
+						<li class="menu-items"><strong>Lab List</strong> </li>
+						<li class="menu-items"><strong> Services</strong> </li>
+						<li class="menu-items"><strong> Packages</strong> </li>
+					   
+					</ul>
+				</div>
+
+                <div class="bottom-menu">
+                    <ul id="bottom-menu-ul">
+                        <li class="" id="setting-list"><i class="fa fa-cog"></i><strong>&nbsp;&nbsp;Settings</strong><i id="show-setting" class="fa fa-angle-right" id=""></i></li>
+                    </ul>
+                </div>
+			</div>                
+		</div>
+		<div class="shadowbox2">
+			<h2>Billing Information</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                <label style="margin-top:20px;"> Bill Numbers </label>
+                <hr style="width:100%;text-align:left;margin-left:0; margin-top:5px;">
+              </div>
+            </div>
+			<div class="row colorbar section-content zero-margin">
+				<div class="col-sm-4 text-label"> OP Bill Number
+					<input required type="number" class="form-control only-bottom-border" placeholder="op bill number" name=""> </div>
+				<div class="col-sm-4 text-label"> Case Number
+					<input required type="number" class="form-control only-bottom-border" placeholder="case number" name=""> </div>
+				<div class="col-sm-4 text-label"> Date
+					<input required type="date" class="form-control only-bottom-border" placeholder="date" name=""> </div>
+				
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                <label style="margin-top:20px;"> Patient Details </label>
+                <hr style="width:100%;text-align:left;margin-left:0; margin-top:5px;">
+              </div>
+            </div>
+			<div class="row colorbar section-content zero-margin">
+				<div class="col-sm-4 text-label"> First Name
+					<input required type="text" class="form-control only-bottom-border" placeholder="First Name" name="first name"> </div>
+				<div class="col-sm-4 text-label"> Last Name
+					<input required type="text" class="form-control only-bottom-border" placeholder="Last Name" name="last name"> </div>
+				<div class="col-sm-4 text-label"> Age
+					<input required type="number" class="form-control only-bottom-border" placeholder="Age" name="age"> </div>
+				
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                <label style="margin-top:20px;"> Amount </label>
+                <hr style="width:100%;text-align:left;margin-left:0; margin-top:5px;">
+              </div>
+            </div>
+			<div class="row colorbar section-content zero-margin">
+				<div class="col-sm-4 text-label"> Total Fee
+					<input required type="number" class="form-control only-bottom-border" placeholder="total fee" name=""> </div>
+				<div class="col-sm-4 text-label"> Total Service Cost
+					<input required type="number" class="form-control only-bottom-border" placeholder="total service cost" name=""> </div>
+				<div class="col-sm-4 text-label"> Net Bill Amount
+					<input required type="number" class="form-control only-bottom-border" placeholder="net bill amount" name=""> </div>
+                <div class="col-sm-4 text-label"> Cash Recieved
+                    <input required type="number" class="form-control only-bottom-border" placeholder="cash recieved" name=""> </div>
+                <div class="col-sm-4 text-label"> Balance Amount
+                    <input required type="number" class="form-control only-bottom-border" placeholder="cash recieved" name=""> </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                <label style="margin-top:20px;"> Service Billing </label>
+                <hr style="width:100%;text-align:left;margin-left:0; margin-top:5px;">
+              </div>
+            </div>
+			<div class="row colorbar section-content zero-margin">
+				<div class="col-md-4 text-label"> Laboratory
+					<input required type="text" class="form-control only-bottom-border" placeholder="laboratory" name=""> 
+					
+				</div>
+				<div class="col-md-2" id="binfoaddlab">
+					<i class="fa fa-plus addicon"></i>
+				</div>
+                <div class="col-md-6 billInfoCboxesContainer">
+                    <form action="/action_page.php">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1">DENGUE - ANTIBODIES </label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> PREGNANCY TEST</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> SERUM AMYLASE</label><br>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1">DENGUE - ANTIBODIES </label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> PREGNANCY TEST</label><br>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1">DENGUE - ANTIBODIES </label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> PREGNANCY TEST</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> SERUM AMYLASE 250 INR </label>
+					</form>
+					
+				</div>
+				<div class="col-md-6"></div>
+				<div  class="billing-action-buttons">
+					<ul class="action-btn">
+						<li>
+							<button class="s-btn success-button"><i class="fas fa-save"></i>  Save</button>
+						</li>
+						<li>
+							<button class="c-btn cancel-button"><i class="fas fa-trash"></i>  Clear</button>
+						</li>
+						<li>
+							<button class="b-btn"><i class="fa fa-arrow-circle-left"></i>  Back</button>
+						</li>
+					</ul>
+				</div>
+            </div>
+            
+
+            
+			
+		</div>
+	</div>
+</body>
+
+</html>

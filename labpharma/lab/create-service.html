@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vidmed Aayurveda</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--Header Panel Section-->
+        <div class="row col-sm-12 header-panel zero-margin">
+			<div class="application-bar" id="show-sidebar">
+				<i class="fas fa-align-justify"></i>
+			</div>
+			<div id="logo-bg">
+				<img src="./assets/images/logo-inline-small.png">
+			</div>
+			<div id="menu-1">
+				<ul style="list-style-type: none;">
+					<li class="a">OP Billing</li>
+					<li class="a">Lab List</li>
+					<li class="a">Services</li>
+					<li class="a">Packages</li>
+				</ul>
+			</div>
+		</div>
+		<div id="sidebar-overlay">
+            <div id="settings">
+                <div id="back-to-main-menu">
+                    <span><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Back to main menu</span>
+                </div>
+                <ul id="application-menu">
+                    <li class="menu-items"><strong>Change Password</strong></li>
+                    <li class="menu-items"><strong>Address</strong> </li>
+                    <li class="menu-items"><strong>Logout</strong> </li>
+                </ul>
+            </div>
+			<div id="transparent-box" class="transparent-box" >
+
+
+			</div>
+			<div class="sidebar">
+			  <div class="logo-sidebar">
+				<img src="./assets/images/logo-inline-small.png">
+				</div>
+				<div>
+					<ul id="application-menu">
+						<li class="menu-items"><strong>OP Billing</strong></li>
+						<li class="menu-items"><strong>Lab List</strong> </li>
+						<li class="menu-items"><strong> Services</strong> </li>
+						<li class="menu-items"><strong> Packages</strong> </li>
+					   
+					</ul>
+                </div>
+                <div class="bottom-menu">
+                    <ul id="bottom-menu-ul">
+                        <li class="" id="setting-list"><i class="fa fa-cog"></i><strong>&nbsp;&nbsp;Settings</strong><i id="show-setting" class="fa fa-angle-right" id=""></i></li>
+                    </ul>
+                </div>
+			</div>                
+		</div>
+        <div class="shadowbox2">
+            <h2>Create Service</h2>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-6 text-label">
+                    Service Name
+                    <input required type="text" class="form-control only-bottom-border" placeholder="service name" name="">
+                </div>
+                <div class="col-sm-6 text-label">
+                    Service Charge
+                    <input required type="number" class="form-control only-bottom-border" placeholder="service charge" name="">
+                </div>
+            </div>
+            <br>
+            <label>Test Components</label>
+            <hr>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-4 text-label">
+                    Component Name
+                    <input required type="text" class="form-control only-bottom-border" id="component_name" placeholder="component name" name="">
+                </div>
+                <div class="col-sm-4 text-label">
+                    Units
+                    <input required type="number" class="form-control only-bottom-border" id="c_units" placeholder="units" name="">
+                </div>
+                <div class="col-sm-4 text-label">
+                    Normal Range
+                    <input required type="number" class="form-control only-bottom-border" id="normal_range" placeholder="normal range" name="">
+                </div>
+                <div class="col-sm-4 text-label">
+                    Min Range
+                    <input required type="text" class="form-control only-bottom-border" id="minimum_range" placeholder="minimum range" name="">
+                </div>
+                <div class="col-sm-4 text-label">
+                    Max Range
+                    <input required type="number" class="form-control only-bottom-border" id="maximum_range" placeholder="maximum range" name="">
+                </div>
+                <div class="col-sm-4 text-label">
+                    <button class="button button2 success-button">Edit</button>
+                    <button class="button button2 margin-10-left cancel-button">Clear</button>
+                </div>
+                <br>
+                <br>
+
+                <div class="row colorbar section-content zero-margin">
+                    <div class="col-sm-12" style="width:100%;overflow-x: scroll;">
+                        <table id="create-service-table" border="1" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>S.NO</th>
+                                    <th>Component Name</th>
+                                    <th>Units</th>
+                                    <th>Normal Ref Range</th>
+                                    <th>Minimum Range</th>
+                                    <th>Maximum Range</th>
+                                    <th>Edit</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Blood Sugar Level</td>
+                                    <td>23</td>
+                                    <td>61</td>
+                                    <td>45</td>
+                                    <td>75</td>
+                                    <td>
+                                        <ul id="ul-actions">
+                                            <li><button class="btn btn-success edit-r">Edit</button></li>
+                                            <li><button class="btn btn-danger delete-r">Delete</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>System Architect</td>
+                                    <td>22</td>
+                                    <td>61</td>
+                                    <td>45</td>
+                                    <td>75</td>
+                                    <td>
+                                        <ul id="ul-actions">
+                                            <li><button class="btn btn-success edit-r">Edit</button></li>
+                                            <li><button class="btn btn-danger delete-r">Delete</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>System Architect</td>
+                                    <td>54</td>
+                                    <td>61</td>
+                                    <td>45</td>
+                                    <td>75</td>
+                                    <td>
+                                        <ul id="ul-actions">
+                                            <li><button class="btn btn-success edit-r">Edit</button></li>
+                                            <li><button class="btn btn-danger delete-r">Delete</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>System Architect</td>
+                                    <td>34</td>
+                                    <td>61</td>
+                                    <td>45</td>
+                                    <td>75</td>
+                                    <td>
+                                        <ul id="ul-actions">
+                                            <li><button class="btn btn-success edit-r">Edit</button></li>
+                                            <li><button class="btn btn-danger delete-r">Delete</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>System Architect</td>
+                                    <td>34</td>
+                                    <td>61</td>
+                                    <td>45</td>
+                                    <td>75</td>
+                                    <td>
+                                        <ul id="ul-actions">
+                                            <li><button class="btn btn-success edit-r">Edit</button></li>
+                                            <li><button class="btn btn-danger delete-r">Delete</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

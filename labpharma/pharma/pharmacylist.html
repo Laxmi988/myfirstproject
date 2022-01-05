@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vidmed Aayurveda</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/main.js"></script>
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <!--Header Panel Section-->
+        <div class="row col-sm-12 header-panel zero-margin">
+            <div class="application-bar" id="show-sidebar">
+                <i class="fas fa-align-justify"></i>
+            </div>
+            <div id="logo-bg">
+                <img src="./assets/images/logo-inline-small.png">
+            </div>
+            <div id="menu-1">
+                <ul style="list-style-type: none;">
+                    <li class="a">Pharmacy List</li>
+                    <li class="a">Physical stock Taking</li>
+                    <li id="reports" class="a">Reports</li>
+                </ul>
+                <div id="sec_menu">
+                    <p class="clicked-reports">Drugs Revenue Report</p>
+                    <p class="clicked-reports">List of Prescribed Drugs Report</p>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar-overlay">
+            <div id="settings">
+                <div id="back-to-main-menu">
+                    <span><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Back to main menu</span>
+                </div>
+                <ul id="application-menu">
+                    <li class="menu-items"><strong>Change Password</strong></li>
+                    <li class="menu-items"><strong>Address</strong> </li>
+                    <li class="menu-items"><strong>Logout</strong> </li>
+                </ul>
+            </div>
+            <div id="transparent-box" class="transparent-box">
+
+
+            </div>
+            <div class="sidebar">
+                <div class="logo-sidebar">
+                    <img src="./assets/images/logo-inline-small.png">
+                </div>
+                <div>
+                    <ul id="application-menu">
+                        <li class="menu-items"><strong>Pharmacy List</strong></li>
+                        <li class="menu-items"><strong>Physical stock Taking</strong> </li>
+                        <li class="menu-items"><strong> Reports</strong> </li>
+
+                    </ul>
+                </div>
+                <div class="bottom-menu">
+                    <ul id="bottom-menu-ul">
+                        <li class="" id="setting-list"><i class="fa fa-cog"></i><strong>&nbsp;&nbsp;Settings</strong><i id="show-setting" class="fa fa-angle-right" id=""></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shadowbox2">
+            <h1>Pharmacy List</h1>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-3 text-label">
+                    From date
+                    <input required type="date" class="form-control only-bottom-border" placeholder="username" name="">
+                </div>
+                <div class="col-sm-3 text-label">
+                    To date
+                    <input required type="date" class="form-control only-bottom-border" placeholder="username" name="">
+                </div>
+                <div class="col-sm-3 text-label">
+                    Patient Name
+                    <input required type="text" class="form-control only-bottom-border" placeholder="username" name="">
+                </div>
+                <div class=" col-md-3 search-icon">
+                    <button class="button button2 success-button success-button1 ">search  <i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-12" style="width:100%;overflow-x: scroll;">
+                    <table border="1" id="example" class="display datatable-grid" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Case Number</th>
+                                <th>Patient</th>
+                                <th>Age</th>
+                                <th>Doctor</th>
+                                <th>Prescription</th>
+                                <th>Dispense</th>
+                                <th>Is Delivered</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Yuri Berry</td>
+                                <td>Chief Marketing Officer (CMO)</td>
+                                <td>New York</td>
+                                <td>40</td>
+                                <td>2009/06/25</td>
+                                <td><button class="button button2 success-button">Prescription </button></td>
+                                <td><button class="button button2 success-button">view/Print</i></button></td>
+                                <td>Delivered</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

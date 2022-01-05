@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vidmed Aayurveda</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="popup-container">
+        <div id="popup-content">
+            <h3 class="h-padding">Material List</h3>
+            <span id="close-popup" class="close-popup">
+            X
+            </span>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-12" style="width:100%;overflow-x: scroll;">
+                    <table border="1" id="phystpopuptable" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Material Name</th>
+                                <th>Material Type</th>
+                                <th>Batch No</th>
+                                <th>Expiry Date</th>
+                                <th>qoh</th>
+                                <th>ADD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td><button class="button button2 success-button">Add</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td><button class="button button2 success-button">Add</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <!--Header Panel Section-->
+        <div class="row col-sm-12 header-panel zero-margin">
+            <div class="application-bar" id="show-sidebar">
+                <i class="fas fa-align-justify"></i>
+            </div>
+            <div id="logo-bg">
+                <img src="./assets/images/logo-inline-small.png">
+            </div>
+            <div id="menu-1">
+                <ul style="list-style-type: none;">
+                    <li class="a">Pharmacy List</li>
+                    <li class="a">Physical stock Taking</li>
+                    <li id="reports" class="a">Reports</li>
+                </ul>
+                <div id="sec_menu">
+                    <p class="clicked-reports">Drugs Revenue Report</p>
+                    <p class="clicked-reports">List of Prescribed Drugs Report</p>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar-overlay">
+            <div id="settings">
+                <div id="back-to-main-menu">
+                    <span><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Back to main menu</span>
+                </div>
+                <ul id="application-menu">
+                    <li class="menu-items"><strong>Change Password</strong></li>
+                    <li class="menu-items"><strong>Address</strong> </li>
+                    <li class="menu-items"><strong>Logout</strong> </li>
+                </ul>
+            </div>
+            <div id="transparent-box" class="transparent-box">
+
+
+            </div>
+            <div class="sidebar">
+                <div class="logo-sidebar">
+                    <img src="./assets/images/logo-inline-small.png">
+                </div>
+                <div>
+                    <ul id="application-menu">
+                        <li class="menu-items"><strong>Pharmacy List</strong></li>
+                        <li class="menu-items"><strong>Physical stock Taking</strong> </li>
+                        <li class="menu-items"><strong> Reports</strong> </li>
+
+                    </ul>
+                </div>
+                <div class="bottom-menu">
+                    <ul id="bottom-menu-ul">
+                        <li class="" id="setting-list"><i class="fa fa-cog"></i><strong>&nbsp;&nbsp;Settings</strong><i id="show-setting" class="fa fa-angle-right" id=""></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shadowbox2">
+            <h1>Physical Stock Taking</h1>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-12">
+                    <div class="col-sm-3 text-label">
+                        Physical Stock Taking No
+                        <input required type="number" class="form-control only-bottom-border" placeholder="Physical stock taking no" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Store Name
+                        <input required type="text" class="form-control only-bottom-border" placeholder="store name" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        User Name
+                        <input required type="text" class="form-control only-bottom-border" placeholder="username" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Recieving Date
+                        <input required type="date" class="form-control only-bottom-border" placeholder="recievingdate" name="">
+                    </div>
+                    <br>
+                    <br><br><br>
+                    <div class="col-sm-2">
+                        <label class="text-label">Receiving Type:</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <label>Opening Stock</label>
+                        <input type="radio" id="female" name="gender" value="female" checked="checked">
+                    </div>
+                    <div class="col-sm-2">
+                        <label>Regular Stock</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                    </div>
+                </div>
+
+            </div>
+            <!--
+            <div class="row radio-buttons">
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+                        <label>Recieving Type</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <label>Opening Stock</label>
+                        <input type="radio" id="female" name="gender" value="female" checked="checked">
+                    </div>
+                    <div class="col-sm-2">
+                        <label>Regular Stock</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                    </div>
+
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <label style="margin-top:20px;"> Material </label>
+                    <hr style="width:100%;text-align:left;margin-left:0">
+                </div>
+            </div>
+
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-12">
+                    <div class="col-sm-3 text-label">
+                        Material
+                        <select id="selct-material" class="form-control only-bottom-border" placeholder="material" name="">
+                                <option value="37">Alex</option>
+                                <option value="1">Aluminium Hydroxide</option>
+                                <option value="29">Ambroxol</option>
+                                <option value="38">AMLIP 10MG</option>
+                                <option value="39">AMLIP 5MG</option>
+                                <option value="2">Amlodipine</option>
+                                <option value="3">Amoxicillin</option>
+                                <option value="5">Amoxicillin And Potassium Clavulanate</option>
+                                <option value="40">ARKAMIN</option>
+                                <option value="41">Ascazin</option>
+                                <option value="6">Ascorbic Acid</option>
+                                <option value="42">ASCoril</option>
+                                <option value="43">Ascoril D</option>
+                                <option value="44">ASTHALIN INHALER</option>
+                                <option value="45">Aten</option>
+                                <option value="7">Atenolol</option>
+                                <option value="8">Azithromycin</option>
+                                <option value="9">B Complex</option>
+                                <option value="128">bbb</option>
+                                <option value="46">BENIDINE 8MG</option>
+                                <option value="47">BETACAP TR 40MG</option>
+                                <option value="48">Betacard</option>
+                                <option value="49">Betaloc</option>
+                                <option value="50">Caladryl</option>
+                                <option value="51">calamine</option>
+                                <option value="10">Calcium</option>
+                                <option value="52">calora</option>
+                                <option value="53">Calpol</option>
+                                <option value="54">Candid</option>
+                                <option value="56">CARDACE 2.5MG</option>
+                                <option value="57">CETANIL T</option>
+                                <option value="11">Cetrizine</option>
+                                <option value="12">Chlorpheniramine Maleate</option>
+                                <option value="58">CINOD 10MG</option>
+                                <option value="59">Cipcal</option>
+                                <option value="60">Ciplox</option>
+                                <option value="13">Ciproflaxacin</option>
+                                <option value="61">Clear Wax</option>
+                                <option value="62">Clocip</option>
+                                <option value="14">Co-Trimoxazole</option>
+                                <option value="124">Crocin</option>
+                                <option value="125">Crocin-500Mg</option>
+                                <option value="63">D3 Max</option>
+                                <option value="64">D3 Must</option>
+                                <option value="65">Daonil</option>
+                                <option value="134">dggg</option>
+                                <option value="15">Diclofenac Sodium</option>
+                                <option value="66">DILZEM 30MG</option>
+                                <option value="67">Dolo</option>
+                                <option value="135">Dolo 650MG</option>
+                                <option value="16">Domperidone</option>
+                                <option value="17">Doxycycline</option>
+                                <option value="68">DUOLIN INHALER</option>
+                                <option value="69">DUOVA ROTACAPS</option>
+                                <option value="70">Electral Powder</option>
+                                <option value="71">Enam</option>
+                                <option value="126">Fair &amp; Lovely</option>
+                                <option value="72">FORACORT 200 INHALER</option>
+                                <option value="18">Glibenclamide</option>
+                                <option value="73">GLIMESTAR M1</option>
+                                <option value="74">GLIMY 1MG</option>
+                                <option value="75">GLIMY 2MG</option>
+                                <option value="76">Glyciphase</option>
+                                <option value="77">Glycomet</option>
+                                <option value="136">hhrrww</option>
+                                <option value="78">HYGLIM M2</option>
+                                <option value="79">HYGLIM M2 FORTE</option>
+                                <option value="19">Iron Folic Acid</option>
+                                <option value="80">Iroz</option>
+                                <option value="81">Istamet</option>
+                                <option value="82">Janumet</option>
+                                <option value="129">jjjj</option>
+                                <option value="83">Koflet H</option>
+                                <option value="84">Kufril</option>
+                                <option value="85">Kufril D</option>
+                                <option value="86">Lariago DS</option>
+                                <option value="87">LEVOLIN INHALER</option>
+                                <option value="88">Livozen</option>
+                                <option value="89">Lupical</option>
+                                <option value="90">MAXIFLOW INHALER</option>
+                                <option value="91">Met Xl</option>
+                                <option value="20">Metformin</option>
+                                <option value="21">Metronidazole</option>
+                                <option value="92">Mucinac</option>
+                                <option value="93">Mupi</option>
+                                <option value="130">nff</option>
+                                <option value="94">NICARDIA RETARD 20MG</option>
+                                <option value="22">Nifedipine</option>
+                                <option value="127">nnn</option>
+                                <option value="23">Norfloxacin</option>
+                                <option value="35">Ofloxacin</option>
+                                <option value="142">Ors</option>
+                                <option value="24">Pantoprazole</option>
+                                <option value="25">Paracetamol</option>
+                                <option value="95">Paracip</option>
+                                <option value="96">Persol</option>
+                                <option value="122">Radex</option>
+                                <option value="123">Ragini</option>
+                                <option value="26">Ranitidine</option>
+                                <option value="120">Rapido</option>
+                                <option value="121">Razo</option>
+                                <option value="97">Resochin</option>
+                                <option value="179">Sanitary Napkins</option>
+                                <option value="133">sdfdf</option>
+                                <option value="98">Sereflow (Salmetrol+fluticason</option>
+                                <option value="99">SEROFLOW 125 INHALER</option>
+                                <option value="100">SEROFLOW 250 INHALER</option>
+                                <option value="101">Shelcal</option>
+                                <option value="102">Strepsils</option>
+                                <option value="103">T-Bact</option>
+                                <option value="104">TELMA  H</option>
+                                <option value="105">TELMA 40 MG</option>
+                                <option value="106">TELMA AM</option>
+                                <option value="107">TENIVA</option>
+                                <option value="108">TENIVA M</option>
+                                <option value="109">TENIVA M FORTE</option>
+                                <option value="132">tyu</option>
+                                <option value="27">Vit A &amp; D</option>
+                                <option value="110">VOGLIMAC 0.2</option>
+                                <option value="111">VOGLIMAC 0.3</option>
+                                <option value="112">VOGLISTAR GM2</option>
+                                <option value="113">Wallyte Powder</option>
+                                <option value="114">Waxonil</option>
+                                <option value="115">Waxsol</option>
+                                <option value="180">xyz</option>
+                                <option value="116">Z&amp;D</option>
+                                <option value="118">zeeee</option>
+                                <option value="119">ZEESS</option>
+                                <option value="28">Zinc Sulphate</option>
+                                <option value="117">Zincofer</option>
+                                <option value="0">New Drug</option>
+                            </select>
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Material Type
+                        <select class="form-control only-bottom-border" id="dd_MaterialType" name="MaterialType"><option value="">Select</option>
+                            <option value="1">SYRUPS</option>
+                            <option value="2">ABCDEFGH</option>
+                            <option value="3">CAPSULEHJ</option>
+                            <option value="4">OINTA</option>
+                            <option value="5">LOTION</option>
+                            <option value="6">INJ</option>
+                            <option value="7">LIQUID</option>
+                            <option value="8">CREAM</option>
+                            <option value="9">SACHET</option>
+                            <option value="10">LOZENGES</option>
+                            <option value="11">POWDER</option>
+                            <option value="12">GEL</option>
+                            <option value="13">INHALER</option>
+                            <option value="14">ROTACAPS</option>
+                            <option value="15">DROPS</option>
+                            <option value="16">Spray</option>
+                            <option value="17">Suspension</option>
+                            <option value="18">Topical</option>
+                            <option value="19">Medical Aid</option>
+                            <option value="20">Personal Care</option>
+                            </select>
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Batch Number
+                        <input required type="number" class="form-control only-bottom-border" placeholder="batch number" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Expiry Date
+                        <input required type="date" class="form-control only-bottom-border" placeholder="expiry date" name="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-12">
+                    <div class="col-sm-3 text-label">
+                        QOH
+                        <input required type="number" class="form-control only-bottom-border" placeholder="qoh" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Physical Stock
+                        <input required type="text" class="form-control only-bottom-border" placeholder="physical stock" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Purchase Rate
+                        <input required type="number" class="form-control only-bottom-border" placeholder="purchase rate" name="">
+                    </div>
+                    <div class="col-sm-3 text-label">
+                        Remarks
+                        <input required type="text" class="form-control only-bottom-border" placeholder="remarks" name="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row button-class-margin">
+                <div class="col-sm-12 button-class">
+                    <div class="col-sm-2">
+                        <button class="button button2 success-button">Add</button>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <button class="button button2  cancel-button">Remove</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <div class="row colorbar section-content zero-margin">
+                <div class="col-sm-12" style="width:100%;overflow-x: scroll;">
+                    <table border="1" id="example" class="display datatable-grid" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Material Name</th>
+                                <th>Material Type</th>
+                                <th>Batch No</th>
+                                <th>Expiry Date</th>
+                                <th>qoh</th>
+                                <th>Physical Stock</th>
+                                <th>Difference</th>
+                                <th>Purchase Rate</th>
+                                <th>Remarks</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+            <div class="panel-bottom">
+                <div class="btn-container">
+                    <button class="button button2 success-button">Add</button>
+                    <button class="button button2 margin-10-left cancel-button">Remove</button>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
